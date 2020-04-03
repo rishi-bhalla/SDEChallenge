@@ -19,7 +19,7 @@ public class CalculateMovingAverageTest {
 	 * This is the exception rule to check if the necessary exception is being thrown on providing incorrect values.
 	 */
 	@Rule
-    private ExpectedException exception = ExpectedException.none();
+    public ExpectedException exception = ExpectedException.none();
 	
 	/**
 	 * Instance of the MovingAverageImpl implementation class.

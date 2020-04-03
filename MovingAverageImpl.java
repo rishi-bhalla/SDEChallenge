@@ -1,6 +1,6 @@
 package com.paytmlabs.sdechallenge;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -49,7 +49,7 @@ public class MovingAverageImpl implements MovingAverage<Double> {
 		if(windowSize <= 0)
 			throw new IllegalArgumentException("Please enter a valid window size.");
 		this.windowSize = windowSize;
-		this.elements = new ArrayList<Double>();
+		this.elements = new LinkedList<Double>();
 		this.sum = 0.0;
 	}
 
