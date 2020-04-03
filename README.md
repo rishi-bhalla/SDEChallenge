@@ -5,7 +5,9 @@ Solution 1: Calculate Moving average of the last N elements
 
 To meet our requirements and maintain optimal performance, the underlying data structure being used here is an LinkedList. We could have used ArrayList as well but because we are very often adding elements into the list, so its better to go with the LinkedList rather than ArrayList due to the time insertion time complexity of LinkedList. For insertion, LinkedList has time complexity of O(1) whereas for ArrayList it is O(n).
 
-In case there comes a scenario of removing the first element, LinkedList would still be better as deletions are faster in LinkedList O(1) compared to ArrayList's O(n).
+Also, deletions are faster in case of LinkedList as compared to the ArrayList. For frequent additions and deletions, LinkedList is much better than ArrayList.
+
+When the list grows, all the elements in the ArrayList need to be copied into a bigger sized location as it is backed by an array internally. This is not the case in the LinkedList as it maintains pointers.
 
 To increase the performance further and make sure we do not put validation checks every time, the windowSize validation has been put inside the constructor itself. This wont allow us to instantiate the implementation class in case the value of the windowSize is not correct. Also, we need not put this check later on.
 
